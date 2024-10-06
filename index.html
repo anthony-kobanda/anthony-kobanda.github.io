@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Kobanda - Homepage</title>
-    <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
+        <!-- Hamburger menu icon for mobile view -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <nav>
-            <ul class="nav-list">
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html" class="active">Home</a></li> <!-- Active link will be distinct -->
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#personal-projects">Personal Projects</a></li>
@@ -21,7 +23,6 @@
     </header>
 
     <section class="intro">
-        <!-- Updated path for the profile picture -->
         <img src="images/profile.jpg" alt="Anthony Kobanda" class="profile-pic">
         <h1>Anthony Kobanda</h1>
         <p>PhD Student in Deep Reinforcement Learning</p>
@@ -37,6 +38,14 @@
     <footer>
         <p>Contact me at: <a href="mailto:anthony.kobanda@example.com">anthony.kobanda@example.com</a></p>
     </footer>
+
+    <script>
+        // Toggle menu for mobile
+        function toggleMenu() {
+            var navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+    </script>
 
 </body>
 

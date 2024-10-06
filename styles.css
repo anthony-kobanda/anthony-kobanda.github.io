@@ -11,9 +11,12 @@ body {
     line-height: 1.6;
 }
 
+/* Navigation bar */
+
 header {
     background-color: #333;
     padding: 10px;
+    position: relative;
 }
 
 .nav-list {
@@ -29,6 +32,16 @@ header {
 .nav-list a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #f0db4f;
+}
+
+.nav-list .active {
+    font-weight: bold;
+    color: #f0db4f;
 }
 
 .intro {
@@ -56,8 +69,29 @@ footer {
     margin-top: 50px;
 }
 
-.social-icons img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
+/* Mobile responsiveness */
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
 }
