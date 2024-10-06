@@ -8,46 +8,58 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 0 20px;
+    padding: 0 40px; /* Adjust the padding around the body */
 }
 
-/* Limit text width */
+/* Page container to control overall width */
+.container {
+    max-width: 1200px; /* Allow the page to use more of the screen width */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Add padding inside the container */
+}
+
+/* Introduction Section */
 .intro {
     text-align: center;
-    margin-top: 40px; /* Adjusted spacing above the profile section */
+    margin-top: 40px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Justify description text with reduced width */
+.description {
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    margin-bottom: 25px;
+}
+
+.description p {
+    margin-bottom: 20px;
 }
 
 /* Profile Picture */
 .profile-pic {
     width: 150px;
     border-radius: 50%;
-    margin-bottom: 20px; /* Added spacing below the profile picture */
+    margin-bottom: 20px;
 }
 
 /* Hashtags Section */
 .hashtags {
-    margin-top: 15px; /* Adjust spacing above the hashtags */
-    margin-bottom: 25px; /* Increased space below the hashtags */
-}
-
-/* Justified description text */
-.description {
-    text-align: justify;
-    margin-bottom: 25px; /* Adjusted spacing between paragraphs and other elements */
-}
-
-.description p {
-    margin-bottom: 20px; /* Space between paragraphs */
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 /* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 30px; /* Increased space above the social icons */
+    margin-top: 30px;
 }
 
 .social-icons a {
@@ -63,8 +75,8 @@ body {
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 40px; /* Added space above the footer */
-    margin-bottom: 20px; /* Reduced space below the footer */
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 /* Navigation bar */
