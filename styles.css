@@ -8,15 +8,15 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 0 40px; /* Adjust the padding around the body */
+    padding: 0 0;
 }
 
 /* Page container to control overall width */
 .container {
-    max-width: 1200px; /* Allow the page to use more of the screen width */
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px; /* Add padding inside the container */
+    padding: 0 20px;
 }
 
 /* Introduction Section */
@@ -31,7 +31,7 @@ body {
 /* Justify description text with reduced width */
 .description {
     text-align: justify;
-    max-width: 800px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
@@ -84,6 +84,7 @@ header {
     background-color: #333;
     padding: 10px;
     position: relative;
+    z-index: 10; /* Ensures header stays on top */
 }
 
 /* Navigation Links */
@@ -116,8 +117,9 @@ header {
 .menu-icon {
     display: none;
     font-size: 24px;
-    color: #333;
+    color: #fff; /* Ensure the icon stays visible */
     cursor: pointer;
+    z-index: 20; /* Ensures menu icon stays above the menu */
 }
 
 /* Mobile responsiveness */
