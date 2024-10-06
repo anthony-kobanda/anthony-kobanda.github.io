@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Anthony Kobanda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="work-experience.html" id="experience">Work Experience</a></li>
+                <li><a href="education.html" id="education" class="active">Education</a></li>
+                <li><a href="#publications" id="publications">Publications</a></li>
+                <li><a href="#personal-projects" id="personal-projects">Personal Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="experience-content">
+        <h2>Education</h2>
+        <ul class="timeline">
+            <li>
+                <h3>Master of Science & Technology</h3>
+                <p>École polytechnique, Palaiseau, France <br> Specialization: Artificial Intelligence & Advanced Visual Computing</p>
+                <p>Courses: Deep Learning, Reinforcement Learning, 3D Graphics, Computer Vision, and more.</p>
+            </li>
+            <li>
+                <h3>Master of Science & Computer Engineering</h3>
+                <p>École polytechnique, Palaiseau, France</p>
+                <p>With honors. Focus on Machine Learning, Big Data, Algorithms.</p>
+            </li>
+            <!-- Add more education here -->
+        </ul>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var navList = document.getElementById('nav-list');
+            var menuIcon = document.querySelector('.menu-icon');
+            
+            navList.classList.toggle('show');
+            menuIcon.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
