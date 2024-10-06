@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Anthony Kobanda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="personal-projects.html">Personal Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="timeline">
+        <h1>Professional Experience</h1>
+
+        <div class="timeline-entry">
+            <div class="timeline-date">October 2022 - Present</div>
+            <div class="timeline-content">
+                <h3>Research Engineer</h3>
+                <h4>Ubisoft La Forge, Bordeaux, France</h4>
+                <p>Collaborating on Deep Reinforcement Learning (RL) projects for video game development.</p>
+            </div>
+        </div>
+
+        <div class="timeline-entry">
+            <div class="timeline-date">April 2022 - October 2022</div>
+            <div class="timeline-content">
+                <h3>Research Engineer Intern</h3>
+                <h4>Ubisoft La Forge, Bordeaux, France</h4>
+                <p>Contributed to RL model optimizations for video games.</p>
+            </div>
+        </div>
+
+        <div class="timeline-entry">
+            <div class="timeline-date">July 2020 - September 2020</div>
+            <div class="timeline-content">
+                <h3>Data Scientist Intern</h3>
+                <h4>BCI Asia, Singapore (Remote)</h4>
+                <p>Worked on smart data solutions, including a client database cleaning tool.</p>
+            </div>
+        </div>
+
+        <div class="timeline-entry">
+            <div class="timeline-date">April 2021 - September 2021</div>
+            <div class="timeline-content">
+                <h3>Research Engineer Intern</h3>
+                <h4>Institut de Recherche en Informatique de Toulouse (IRIT), France</h4>
+                <p>Developed surrogate models for agent-based systems in cancer research.</p>
+            </div>
+        </div>
+
+        <div class="timeline-entry">
+            <div class="timeline-date">2019 - 2020</div>
+            <div class="timeline-content">
+                <h3>Project Manager, Event Manager</h3>
+                <h4>XProjets (Junior Enterprise), Palaiseau, France</h4>
+                <p>Led business strategies and client management for large companies and start-ups.</p>
+            </div>
+        </div>
+
+        <div class="timeline-entry">
+            <div class="timeline-date">December 2018 - April 2019</div>
+            <div class="timeline-content">
+                <h3>Deputy Section Head</h3>
+                <h4>National Gendarmerie, Châteaulin, France</h4>
+                <p>Oversaw 33 non-commissioned officers during a training period.</p>
+            </div>
+        </div>
+
+        <div class="timeline-entry">
+            <div class="timeline-date">2019 - 2020</div>
+            <div class="timeline-content">
+                <h3>Strategy & Development Manager</h3>
+                <h4>X-Afrique, Palaiseau, France</h4>
+                <p>Organized forums addressing colonialism's impact on modern society.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact me at: <a href="mailto:anthony.kobanda@example.com">anthony.kobanda@example.com</a></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var navList = document.getElementById('nav-list');
+            var menuIcon = document.querySelector('.menu-icon');
+            navList.classList.toggle('show');
+            menuIcon.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

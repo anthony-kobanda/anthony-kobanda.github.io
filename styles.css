@@ -135,6 +135,7 @@ header {
         position: absolute;
         top: 20px;
         right: 20px;
+
     }
 
     .nav-list {
@@ -155,4 +156,49 @@ header {
         color: #808080;
     }
 
+}
+
+/* Timeline Section */
+.timeline {
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    position: relative;
+}
+
+.timeline-entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-date {
+    flex: 1;
+    padding-right: 20px;
+    text-align: right;
+    color: #555;
+}
+
+.timeline-content {
+    flex: 4;
+    padding-left: 20px;
+    border-left: 2px solid #333; /* Vertical line on the left side */
+}
+
+.timeline-content h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.timeline-content h4 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #555;
+}
+
+.timeline-content p {
+    margin-bottom: 10px;
 }
