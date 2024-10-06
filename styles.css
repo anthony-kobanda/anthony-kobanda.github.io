@@ -8,14 +8,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 0 20px; /* Add some padding to the body to keep the content away from edges */
+    padding: 0 20px;
 }
 
 /* Limit text width */
 .intro {
     text-align: center;
-    margin-top: 50px;
-    max-width: 800px; /* Limit the width of the text */
+    margin-top: 40px; /* Adjusted spacing above the profile section */
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -24,18 +24,30 @@ body {
 .profile-pic {
     width: 150px;
     border-radius: 50%;
+    margin-bottom: 20px; /* Added spacing below the profile picture */
 }
 
 /* Hashtags Section */
 .hashtags {
-    margin-bottom: 20px; /* Add more space below the hashtags */
+    margin-top: 15px; /* Adjust spacing above the hashtags */
+    margin-bottom: 25px; /* Increased space below the hashtags */
+}
+
+/* Justified description text */
+.description {
+    text-align: justify;
+    margin-bottom: 25px; /* Adjusted spacing between paragraphs and other elements */
+}
+
+.description p {
+    margin-bottom: 20px; /* Space between paragraphs */
 }
 
 /* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Increased space above the social icons */
 }
 
 .social-icons a {
@@ -51,7 +63,8 @@ body {
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px; /* Added space above the footer */
+    margin-bottom: 20px; /* Reduced space below the footer */
 }
 
 /* Navigation bar */
@@ -73,25 +86,25 @@ header {
 }
 
 .nav-list a {
-    color: #808080; /* Grey color for inactive links */
+    color: #808080;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .nav-list a:hover {
-    color: #b0b0b0; /* Slightly lighter grey on hover */
+    color: #b0b0b0;
 }
 
 .nav-list .active {
     font-weight: bold;
-    color: #fff; /* White and bold for the active/current page */
+    color: #fff;
 }
 
 /* Menu Icon Styling */
 .menu-icon {
     display: none;
     font-size: 24px;
-    color: #333; /* Dark color initially */
+    color: #333;
     cursor: pointer;
 }
 
@@ -100,14 +113,14 @@ header {
     .menu-icon {
         display: block;
         position: absolute;
-        top: 20px; /* Reduce the top space above the menu */
+        top: 20px;
         right: 20px;
     }
 
     .nav-list {
         display: none;
         flex-direction: column;
-        margin-top: 40px; /* Reduce the space above the menu items */
+        margin-top: 40px;
     }
 
     .nav-list.show {
@@ -115,11 +128,11 @@ header {
     }
 
     .nav-list.show + .menu-icon {
-        color: #fff; /* Turn the menu icon white when clicked */
+        color: #fff;
     }
 
     .nav-list.show li {
-        margin-bottom: 20px; /* Add more space below each menu item */
+        margin-bottom: 20px;
     }
 
     .nav-list a {
