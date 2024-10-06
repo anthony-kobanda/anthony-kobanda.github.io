@@ -36,12 +36,12 @@ header {
 }
 
 .nav-list a:hover {
-    color: #f0db4f;
+    color: #6e7e8e;
 }
 
 .nav-list .active {
     font-weight: bold;
-    color: #f0db4f;
+    color: #6e7e8e;
 }
 
 .intro {
@@ -82,7 +82,7 @@ footer {
 .menu-icon {
     display: none;
     font-size: 24px;
-    color: #fff;
+    color: #333;
     cursor: pointer;
 }
 
@@ -93,6 +93,7 @@ footer {
     }
 
     .nav-list.show {
+        color: #fff;
         display: flex;
     }
 
