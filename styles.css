@@ -1,0 +1,57 @@
+/* Basic reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.intro {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
