@@ -88,7 +88,10 @@
     <script>
         function toggleMenu() {
             var navList = document.getElementById('nav-list');
+            var menuIcon = document.querySelector('.menu-icon');
+            
             navList.classList.toggle('show');
+            menuIcon.classList.toggle('active'); // Toggle active class for color change
         }
     </script>
 

@@ -84,7 +84,7 @@ header {
     background-color: #333;
     padding: 10px;
     position: relative;
-    z-index: 10; /* Ensures header stays on top */
+    z-index: 10;
 }
 
 /* Navigation Links */
@@ -117,9 +117,14 @@ header {
 .menu-icon {
     display: none;
     font-size: 24px;
-    color: #fff; /* Ensure the icon stays visible */
+    color: #333; /* Dark color when inactive */
     cursor: pointer;
-    z-index: 20; /* Ensures menu icon stays above the menu */
+    z-index: 20;
+}
+
+/* When the menu is active, change color to white */
+.menu-icon.active {
+    color: #fff; /* White when active */
 }
 
 /* Mobile responsiveness */
@@ -139,10 +144,6 @@ header {
 
     .nav-list.show {
         display: flex;
-    }
-
-    .nav-list.show + .menu-icon {
-        color: #fff;
     }
 
     .nav-list.show li {
