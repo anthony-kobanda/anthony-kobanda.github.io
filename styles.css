@@ -129,6 +129,7 @@ header {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+
     .menu-icon {
         display: block;
         position: absolute;
@@ -153,4 +154,23 @@ header {
     .nav-list a {
         color: #808080;
     }
+
+    h3 {
+        display: block;
+        line-height: 1.5; /* Adjust spacing between lines if needed */
+    }
+
+    h3 a {
+        display: block; /* Force the links to break onto the next line */
+    }
+
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Keep it behind the content */
 }
