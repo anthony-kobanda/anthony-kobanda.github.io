@@ -8,6 +8,50 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    padding: 0 20px; /* Add some padding to the body to keep the content away from edges */
+}
+
+/* Limit text width */
+.intro {
+    text-align: center;
+    margin-top: 50px;
+    max-width: 800px; /* Limit the width of the text */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Hashtags Section */
+.hashtags {
+    margin-bottom: 20px; /* Add more space below the hashtags */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
 }
 
 /* Navigation bar */
@@ -29,66 +73,25 @@ header {
 }
 
 .nav-list a {
-    color: #808080;
-    /* Grey color for inactive links */
+    color: #808080; /* Grey color for inactive links */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .nav-list a:hover {
-    color: #b0b0b0;
-    /* Slightly lighter grey on hover */
+    color: #b0b0b0; /* Slightly lighter grey on hover */
 }
 
 .nav-list .active {
     font-weight: bold;
-    color: #fff;
-    /* White and bold for the active/current page */
-}
-
-/* Introduction Section */
-.intro {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.profile-pic {
-    width: 150px;
-    border-radius: 50%;
-}
-
-/* Social Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-}
-
-.social-icons img {
-    width: 30px;
-    /* Set uniform width for logos */
-    height: 30px;
-    /* Set uniform height for logos */
-    object-fit: contain;
-    /* Ensure logos scale properly */
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 50px;
+    color: #fff; /* White and bold for the active/current page */
 }
 
 /* Menu Icon Styling */
 .menu-icon {
     display: none;
     font-size: 24px;
-    color: #333;
-    /* Dark color to match the background */
+    color: #333; /* Dark color initially */
     cursor: pointer;
 }
 
@@ -97,24 +100,29 @@ footer {
     .menu-icon {
         display: block;
         position: absolute;
-        top: 30px;
-        /* Lower the menu icon's position */
+        top: 20px; /* Reduce the top space above the menu */
         right: 20px;
     }
 
     .nav-list {
         display: none;
         flex-direction: column;
-        margin-top: 50px;
-        /* Lower the menu items */
+        margin-top: 40px; /* Reduce the space above the menu items */
     }
 
     .nav-list.show {
         display: flex;
     }
 
+    .nav-list.show + .menu-icon {
+        color: #fff; /* Turn the menu icon white when clicked */
+    }
+
+    .nav-list.show li {
+        margin-bottom: 20px; /* Add more space below each menu item */
+    }
+
     .nav-list a {
         color: #808080;
-        /* Grey color for inactive links on mobile */
     }
 }
