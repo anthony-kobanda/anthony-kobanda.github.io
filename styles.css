@@ -69,9 +69,9 @@ header {
 }
 
 .social-icons img {
-    width: 40px;
+    width: 30px;
     /* Set uniform width for logos */
-    height: 40px;
+    height: 30px;
     /* Set uniform height for logos */
     object-fit: contain;
     /* Ensure logos scale properly */
