@@ -1,5 +1,4 @@
 /* Basic reset */
-
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +11,13 @@ body {
 }
 
 /* Navigation bar */
-
 header {
     background-color: #333;
     padding: 10px;
     position: relative;
 }
 
+/* Navigation Links */
 .nav-list {
     display: flex;
     justify-content: flex-end;
@@ -30,20 +29,24 @@ header {
 }
 
 .nav-list a {
-    color: #fff;
+    color: #808080;
+    /* Grey color for inactive links */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .nav-list a:hover {
-    color: #7e5e4e;
+    color: #b0b0b0;
+    /* Slightly lighter grey on hover */
 }
 
 .nav-list .active {
     font-weight: bold;
-    color: #6e7e8e;
+    color: #fff;
+    /* White and bold for the active/current page */
 }
 
+/* Introduction Section */
 .intro {
     text-align: center;
     margin-top: 50px;
@@ -54,6 +57,7 @@ header {
     border-radius: 50%;
 }
 
+/* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -64,43 +68,53 @@ header {
     margin: 0 10px;
 }
 
+.social-icons img {
+    width: 40px;
+    /* Set uniform width for logos */
+    height: 40px;
+    /* Set uniform height for logos */
+    object-fit: contain;
+    /* Ensure logos scale properly */
+}
+
+/* Footer */
 footer {
     text-align: center;
     margin-top: 50px;
 }
 
-/* Social Icons */
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-}
-
-/* Mobile responsiveness */
-
+/* Menu Icon Styling */
 .menu-icon {
     display: none;
     font-size: 24px;
     color: #333;
+    /* Dark color to match the background */
     cursor: pointer;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-        display: none;
-    }
-
-    .nav-list.show {
-        color: #fff;
-        display: flex;
-    }
-
     .menu-icon {
         display: block;
         position: absolute;
-        top: 15px;
+        top: 30px;
+        /* Lower the menu icon's position */
         right: 20px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        margin-top: 50px;
+        /* Lower the menu items */
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-list a {
+        color: #808080;
+        /* Grey color for inactive links on mobile */
     }
 }
