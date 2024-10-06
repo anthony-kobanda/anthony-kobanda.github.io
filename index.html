@@ -9,15 +9,15 @@
 </head>
 
 <body>
+    
     <header>
-        <!-- Hamburger menu icon for mobile view -->
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <nav>
             <ul class="nav-list" id="nav-list">
-                <li><a href="index.html" class="active">Home</a></li> <!-- Active link will be distinct -->
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#personal-projects">Personal Projects</a></li>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="#experience" id="experience">Experience</a></li>
+                <li><a href="#publications" id="publications">Publications</a></li>
+                <li><a href="#personal-projects" id="personal-projects">Personal Projects</a></li>
             </ul>
         </nav>
     </header>
@@ -29,8 +29,10 @@
     </section>
 
     <section class="social-icons">
-        <a href="https://www.linkedin.com/in/anthony-kobanda/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-        <a href="https://scholar.google.com/citations?user=dEBQPAkAAAAJ" target="_blank"><img src="images/scholar.png" alt="Google Scholar"></a>
+        <a href="https://www.linkedin.com/in/anthony-kobanda/" target="_blank"><img src="images/linkedin.png"
+                alt="LinkedIn"></a>
+        <a href="https://scholar.google.com/citations?user=dEBQPAkAAAAJ" target="_blank"><img src="images/scholar.png"
+                alt="Google Scholar"></a>
         <a href="https://twitter.com/anthonykobanda" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
         <a href="https://company.com" target="_blank"><img src="images/company.png" alt="Company"></a>
     </section>
@@ -39,8 +41,25 @@
         <p>Contact me at: <a href="mailto:anthony.kobanda@example.com">anthony.kobanda@example.com</a></p>
     </footer>
 
+    <!-- Add the script here to check the current page URL and highlight the active link -->
     <script>
-        // Toggle menu for mobile
+        // Highlight the current page
+        const currentLocation = window.location.href;
+
+        // Check if the current page is the homepage
+        if (currentLocation.endsWith('/') || currentLocation.endsWith('index.html')) {
+            document.getElementById('home').classList.add('active');
+        } else if (currentLocation.includes('experience')) {
+            document.getElementById('experience').classList.add('active');
+        } else if (currentLocation.includes('publications')) {
+            document.getElementById('publications').classList.add('active');
+        } else if (currentLocation.includes('personal-projects')) {
+            document.getElementById('personal-projects').classList.add('active');
+        }
+    </script>
+
+    <!-- Script for mobile menu toggle -->
+    <script>
         function toggleMenu() {
             var navList = document.getElementById('nav-list');
             navList.classList.toggle('show');
