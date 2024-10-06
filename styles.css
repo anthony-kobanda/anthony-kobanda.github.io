@@ -155,16 +155,4 @@ header {
         color: #808080;
     }
 
-    h3 {
-        display: block;
-    }
-
-    h3::after {
-        content: "\A"; /* Adds a line break after "PhD Candidate @" */
-        white-space: pre;
-    }
-
-    h3 a {
-        display: inline; /* Ensures the links stay on the same line */
-    }
 }
