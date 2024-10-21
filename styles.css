@@ -5,9 +5,18 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
     line-height: 1.6;
+}
+
+/* Flex container for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
     padding: 0 0;
 }
 
@@ -22,10 +31,15 @@ body {
 /* Introduction Section */
 .intro {
     text-align: center;
-    margin-top: 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Stretch the space between the intro and the description */
+.intro, .description {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 /* Justify description text with reduced width */
@@ -46,6 +60,7 @@ body {
 .profile-pic {
     width: 150px;
     border-radius: 50%;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -59,7 +74,7 @@ body {
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-bottom: 20px; /* Always keep 20px gap from the end of the page */
 }
 
 .social-icons a {
@@ -76,7 +91,6 @@ body {
 footer {
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 20px;
 }
 
 /* Navigation bar */
@@ -85,6 +99,7 @@ header {
     padding: 10px;
     position: relative;
     z-index: 10;
+    width: 100%;
 }
 
 /* Navigation Links */
@@ -135,7 +150,6 @@ header {
         position: absolute;
         top: 20px;
         right: 20px;
-
     }
 
     .nav-list {
@@ -190,7 +204,7 @@ header {
 .timeline-content {
     flex: 4;
     padding-left: 20px;
-    border-left: 2px solid #333; /* Vertical line on the left side */
+    border-left: 2px solid #333;
 }
 
 .timeline-content h3 {
