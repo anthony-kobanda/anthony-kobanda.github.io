@@ -155,7 +155,13 @@ header {
     .nav-list {
         display: none;
         flex-direction: column;
-        margin-top: 40px;
+        position: absolute; /* Overlay on top of the content */
+        top: 60px; /* Adjust this to align below the header */
+        left: 0;
+        right: 0;
+        background-color: #333; /* Same color as the header for continuity */
+        z-index: 999; /* Ensure it's above other content */
+        padding: 20px;
     }
 
     .nav-list.show {
@@ -167,15 +173,21 @@ header {
     }
 
     .nav-list a {
-        color: #808080;
+        color: #fff; /* White text for the overlay menu */
+        font-size: 1.2em; /* Slightly larger font for better readability */
+        padding: 10px 0;
     }
 
-    /* Adjust font size for mobile */
-    h3 {
-        font-size: 1em; /* Smaller font size for mobile */
-        line-height: 1.3;
+    .nav-list a:hover {
+        color: #ccc; /* Slightly lighter hover color */
+    }
+
+    /* Ensure page content is not displaced */
+    body {
+        overflow: hidden; /* Prevent scrolling when menu is open */
     }
 }
+
 
 /* Timeline Section */
 .timeline {
