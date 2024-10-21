@@ -5,18 +5,9 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
-    line-height: 1.6;
-}
-
-/* Flex container for the body */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     padding: 0 0;
 }
 
@@ -31,15 +22,10 @@ body {
 /* Introduction Section */
 .intro {
     text-align: center;
+    margin-top: 40px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Stretch the space between the intro and the description */
-.intro, .description {
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 /* Justify description text with reduced width */
@@ -60,7 +46,6 @@ body {
 .profile-pic {
     width: 150px;
     border-radius: 50%;
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -74,7 +59,7 @@ body {
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-top: 30px;
 }
 
 .social-icons a {
@@ -91,6 +76,7 @@ body {
 footer {
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 /* Navigation bar */
@@ -99,7 +85,6 @@ header {
     padding: 10px;
     position: relative;
     z-index: 10;
-    width: 100%;
 }
 
 /* Navigation Links */
@@ -150,18 +135,22 @@ header {
         position: absolute;
         top: 20px;
         right: 20px;
+        z-index: 1001; /* Ensure the icon is above the menu */
     }
 
     .nav-list {
         display: none;
         flex-direction: column;
-        position: absolute; /* Overlay on top of the content */
-        top: 60px; /* Adjust this to align below the header */
+        position: fixed; /* Ensures it stays on top of the entire page */
+        top: 0; /* Stick to the top of the viewport */
         left: 0;
         right: 0;
-        background-color: #333; /* Same color as the header for continuity */
-        z-index: 999; /* Ensure it's above other content */
+        background-color: #333; /* Menu background */
+        z-index: 1000; /* Ensure the menu is above other content */
         padding: 20px;
+        height: 100vh; /* Full height of the viewport */
+        margin: 0; /* Remove margin to ensure there’s no gap */
+        box-sizing: border-box;
     }
 
     .nav-list.show {
@@ -173,63 +162,193 @@ header {
     }
 
     .nav-list a {
-        color: #fff; /* White text for the overlay menu */
-        font-size: 1.2em; /* Slightly larger font for better readability */
+        color: #fff;
+        font-size: 1.2em;
         padding: 10px 0;
     }
 
     .nav-list a:hover {
-        color: #ccc; /* Slightly lighter hover color */
+        color: #ccc;
     }
 
-    /* Ensure page content is not displaced */
-    body {
-        overflow: hidden; /* Prevent scrolling when menu is open */
+    body.menu-open {
+        overflow: hidden; /* Disable scrolling when the menu is open */
     }
 }
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding: 0 0;
+}
 
-/* Timeline Section */
-.timeline {
+/* Page container to control overall width */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Introduction Section */
+.intro {
+    text-align: center;
     margin-top: 40px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
-    position: relative;
 }
 
-.timeline-entry {
-    display: flex;
-    align-items: flex-start;
+/* Justify description text with reduced width */
+.description {
+    text-align: justify;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    margin-bottom: 25px;
+}
+
+.description p {
     margin-bottom: 20px;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Hashtags Section */
+.hashtags {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Navigation bar */
+header {
+    background-color: #333;
+    padding: 10px;
     position: relative;
+    z-index: 10;
 }
 
-.timeline-date {
-    flex: 1;
-    padding-right: 20px;
-    text-align: right;
-    color: #555;
+/* Navigation Links */
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
 }
 
-.timeline-content {
-    flex: 4;
-    padding-left: 20px;
-    border-left: 2px solid #333;
+.nav-list li {
+    margin-left: 20px;
 }
 
-.timeline-content h3 {
-    margin-bottom: 5px;
-    color: #333;
+.nav-list a {
+    color: #808080;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.timeline-content h4 {
-    margin-bottom: 10px;
-    font-weight: normal;
-    color: #555;
+.nav-list a:hover {
+    color: #b0b0b0;
 }
 
-.timeline-content p {
-    margin-bottom: 10px;
+.nav-list .active {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Menu Icon Styling */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #333; /* Dark color when inactive */
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* When the menu is active, change color to white */
+.menu-icon.active {
+    color: #fff; /* White when active */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001; /* Ensure the icon is above the menu */
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: fixed; /* Ensures it stays on top of the entire page */
+        top: 0; /* Stick to the top of the viewport */
+        left: 0;
+        right: 0;
+        background-color: #333; /* Menu background */
+        z-index: 1000; /* Ensure the menu is above other content */
+        padding: 20px;
+        height: 100vh; /* Full height of the viewport */
+        margin: 0; /* Remove margin to ensure there’s no gap */
+        box-sizing: border-box;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-list.show li {
+        margin-bottom: 20px;
+    }
+
+    .nav-list a {
+        color: #fff;
+        font-size: 1.2em;
+        padding: 10px 0;
+    }
+
+    .nav-list a:hover {
+        color: #ccc;
+    }
+
+    body.menu-open {
+        overflow: hidden; /* Disable scrolling when the menu is open */
+    }
 }
