@@ -5,62 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anthony Kobanda | Deep RL Researcher</title>
     <meta name="description" content="PhD Candidate in Deep Reinforcement Learning at Inria Scool & Ubisoft" />
-    <!-- Keeping Tailwind CDN for simplicity, though Vite could bundle it too. It works well for this use case. -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Outfit', 'sans-serif'],
-              mono: ['Space Grotesk', 'monospace'],
-            },
-            colors: {
-              slate: {
-                850: '#151e2e',
-                900: '#0f172a',
-                950: '#020617',
-              },
-              // New Palette: Rose to Violet (Sunset/Dusk Tech)
-              accent: {
-                400: '#f472b6', // Rose
-                500: '#e879f9', // Fuchsia
-                600: '#a78bfa', // Violet
-              }
-            },
-            backgroundImage: {
-              'grid-pattern': "linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)",
-            }
-          },
-        },
-      }
-    </script>
-    <style>
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #020617; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #334155; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #475569; 
-      }
-
-      /* Background Grid Utilities */
-      .bg-grid {
-        background-size: 40px 40px;
-        mask-image: linear-gradient(to bottom, transparent, 10%, white, 90%, transparent);
-        -webkit-mask-image: linear-gradient(to bottom, transparent, 5%, white, 95%, transparent);
-      }
-    </style>
   <script type="importmap">
 {
   "imports": {
@@ -68,8 +15,8 @@
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
     "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "vite": "https://esm.sh/vite@^7.3.1"
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
