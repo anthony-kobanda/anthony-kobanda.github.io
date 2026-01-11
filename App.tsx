@@ -1,26 +1,27 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Background from './components/Background';
 import Hero from './components/Hero';
-import About from './components/About';
-import Timeline from './components/Timeline';
+import Experience from './components/Experience';
+import Education from './components/Education';
 import Publications from './components/Publications';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import ParticleBackground from './components/ParticleBackground';
 
 function App() {
   return (
-    <div className="relative min-h-screen selection:bg-emerald-500/30">
-      <ParticleBackground />
+    <div className="relative min-h-screen">
+      <Background />
       <Navbar />
-      <main className="relative z-10">
+      
+      <main className="relative z-10 flex flex-col">
         <Hero />
-        <About />
-        <Timeline />
+        <Experience />
+        <Education />
         <Publications />
         <Skills />
+        <Contact />
       </main>
-      <Contact />
     </div>
   );
 }

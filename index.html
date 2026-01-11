@@ -3,34 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anthony Kobanda | Deep Learning Researcher</title>
-    <meta name="description" content="Portfolio of Anthony Kobanda, PhD Candidate in Deep Reinforcement Learning at Inria Scool & Ubisoft." />
+    <title>Anthony Kobanda | Deep RL Researcher</title>
+    <meta name="description" content="PhD Candidate in Deep Reinforcement Learning at Inria Scool & Ubisoft" />
+    <!-- Keeping Tailwind CDN for simplicity, though Vite could bundle it too. It works well for this use case. -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0f172a; /* Slate 900 */
-        color: #f8fafc; /* Slate 50 */
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              mono: ['Space Grotesk', 'monospace'],
+            },
+            colors: {
+              slate: {
+                850: '#151e2e',
+                900: '#0f172a',
+                950: '#020617',
+              },
+              // New Palette: Rose to Violet (Sunset/Dusk Tech)
+              accent: {
+                400: '#f472b6', // Rose
+                500: '#e879f9', // Fuchsia
+                600: '#a78bfa', // Violet
+              }
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)",
+            }
+          },
+        },
       }
-      /* Custom scrollbar */
+    </script>
+    <style>
+      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #0f172a;
+        background: #020617; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #334155;
+        background: #334155; 
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #475569;
+        background: #475569; 
+      }
+
+      /* Background Grid Utilities */
+      .bg-grid {
+        background-size: 40px 40px;
+        mask-image: linear-gradient(to bottom, transparent, 10%, white, 90%, transparent);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, 5%, white, 95%, transparent);
       }
     </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.1"
+  }
+}
+</script>
 </head>
-  <body>
+  <body class="bg-slate-950 text-slate-300 antialiased selection:bg-accent-500 selection:text-white">
     <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
