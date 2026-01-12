@@ -1,0 +1,423 @@
+/*
+ * Global Style Sheet for Anthony Kobanda’s portfolio
+ *
+ * The site uses a minimal CSS framework built from scratch. Colours are
+ * defined as CSS variables at the root. A subtle animated gradient
+ * provides a modern background without overwhelming visitors. The layout
+ * is responsive: navigation collapses into a hamburger menu on small
+ * screens, and sections use flexible boxes.
+ */
+
+:root {
+  --color-primary: #5e548e;
+  --color-secondary: #70a0af;
+  --color-accent: #f67280;
+  --color-light: #f7f4ea;
+  --color-dark: #1f1d2b;
+  --gradient-start: #5e548e;
+  --gradient-middle: #c06c84;
+  --gradient-end: #f67280;
+  --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-body: 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  backdrop-filter: blur(8px);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.brand a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-primary);
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-dark);
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--color-primary);
+}
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.nav-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background: var(--color-dark);
+  border-radius: 2px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  padding-top: 60px;
+  color: var(--color-light);
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+  background-size: 600% 600%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  color: var(--color-light);
+}
+
+.hero-text {
+  flex: 1 1 55%;
+  padding: 1rem;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-light);
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  opacity: 0.85;
+}
+
+.hero-image {
+  flex: 1 1 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.profile-placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: 2px dashed rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Section base */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 0.75rem auto 0;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  border-radius: 2px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* About */
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-column {
+  flex: 1 1 45%;
+  min-width: 250px;
+}
+
+.about-column h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.about-column ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.about-column li {
+  margin-bottom: 0.6rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 2px solid var(--color-secondary);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1.1rem;
+  top: 0.3rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: var(--gradient-start);
+  border-radius: 50%;
+  border: 2px solid var(--color-light);
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+}
+
+/* Publications */
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pub-list li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.pub-list strong {
+  color: var(--color-primary);
+}
+
+/* Contact */
+.contact-container {
+  text-align: center;
+}
+
+.contact-details {
+  margin: 1.5rem 0;
+}
+
+.contact-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.contact-details a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-details a:hover {
+  color: var(--color-secondary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--color-secondary);
+}
+
+.btn-secondary {
+  background: var(--color-secondary);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+}
+
+/* Footer */
+.footer {
+  padding: 1.5rem 0;
+  background: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive behaviour */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(6px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+  .nav-menu.open {
+    transform: translateY(0);
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    margin-top: 2rem;
+  }
+  .about-column {
+    flex-basis: 100%;
+  }
+  .timeline {
+    padding-left: 1.5rem;
+  }
+}

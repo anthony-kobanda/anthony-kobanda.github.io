@@ -1,28 +1,199 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anthony Kobanda | Deep RL Researcher</title>
-    <meta name="description" content="PhD Candidate in Deep Reinforcement Learning at Inria Scool & Ubisoft" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
-  }
-}
-</script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Anthony Kobanda – Deep RL Researcher</title>
+  <!-- Link to styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Prefetch the CV so it is cached when the user clicks the download link -->
+  <link rel="preload" href="KOBANDA-Anthony-CV.pdf" as="document">
 </head>
-  <body class="bg-slate-950 text-slate-300 antialiased selection:bg-accent-500 selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body>
+  <!-- Navigation -->
+  <header id="navbar" class="navbar">
+    <div class="container nav-content">
+      <div class="brand">
+        <a href="#home">Anthony&nbsp;Kobanda</a>
+      </div>
+      <nav>
+        <button id="navToggle" aria-label="Toggle navigation" class="nav-toggle">
+          <!-- Hamburger icon -->
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul id="navMenu" class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="KOBANDA-Anthony-CV.pdf" download>Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Anthony Kobanda</h1>
+        <p class="hero-subtitle">Final‑year PhD Candidate in Deep Reinforcement Learning</p>
+        <p class="hero-description">Exploring continual reinforcement learning, generalisation, catastrophic forgetting and scalability with applications in video‑games and beyond.</p>
+        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+      </div>
+      <!-- Profile placeholder -->
+      <div class="hero-image">
+        <div class="profile-placeholder">
+          <span>Profile Photo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="lead">I’m a researcher driven by curiosity and a passion for building intelligent systems that learn over time. Currently, I’m pursuing a PhD in Deep Reinforcement Learning at Inria Scool &amp; Ubisoft (University of Lille), under the supervision of Odalric‑Ambrym Maillard, Rémy Portelas and Ludovic Denoyer.</p>
+      <p>My research focuses on <strong>continual reinforcement learning</strong>—developing agents that can adapt to new tasks without forgetting what they’ve already learned. I’m particularly interested in tackling challenges such as catastrophic forgetting, generalisation across domains and scalability. My long‑term goal is to design adaptive, efficient systems that can operate in diverse, real‑world environments.</p>
+      <div class="about-grid">
+        <div class="about-column">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>PhD in Deep Reinforcement Learning</strong>, Inria Scool / University of Lille &amp; Ubisoft (2023–present)</li>
+            <li><strong>MSc in AI &amp; Advanced Visual Computing</strong>, École Polytechnique (2021–2022)</li>
+            <li><strong>Master of Science &amp; Computer Engineering</strong>, École Polytechnique – Cycle Ingénieur Polytechnicien (2018–2022)</li>
+            <li><strong>National Gendarmerie Officers’ Academy</strong>, Châteaulin, France – Junior Officer training (Sept.–Dec. 2018)</li>
+            <li><strong>Preparatory Classes</strong>, Lycée Jean‑Baptiste Kléber (2015–2018)</li>
+          </ul>
+        </div>
+        <div class="about-column">
+          <h3>Skills &amp; Interests</h3>
+          <ul>
+            <li><strong>Programming:</strong> Python, PyTorch, JAX, TensorFlow, Hydra, NumPy, OpenCV, Pandas, ROS, SciPy, Scikit‑learn, Git/GitHub, SLURM</li>
+            <li><strong>Languages:</strong> French (native), English (fluent), Chinese (intermediate), Spanish (basic)</li>
+            <li><strong>Interests:</strong> Basketball (13+ years, former university team member), dance (break‑dance, bachata), cooking, video editing &amp; animation, reading manga &amp; comics, open‑world RPGs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Junior Research Scientist – Ubisoft La Forge</h3>
+            <span class="timeline-date">Apr 2023 – present · Bordeaux, France</span>
+            <p>Working on deep learning for budgeted reinforcement learning, exploring efficient policy optimisation under resource constraints.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Research Scientist Intern – Ubisoft La Forge</h3>
+            <span class="timeline-date">Apr – Oct 2022 · Bordeaux, France</span>
+            <p>Developed deep learning approaches for budgeted reinforcement learning, laying groundwork for subsequent research roles.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Research Engineer Intern – Institut de Recherche en Informatique / CRCT</h3>
+            <span class="timeline-date">Apr – Sept 2021 · Toulouse, France</span>
+            <p>Programmed a robot and web interface for semi‑automated cell injections and built a surrogate model for agent‑based simulations, leading to a publication at the third ISMCO.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Data Scientist Intern – BCI Asia</h3>
+            <span class="timeline-date">Jul – Sept 2020 · Singapore (remote)</span>
+            <p>Developed data‑cleaning and prospecting tools to support business intelligence.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Senior Project Manager &amp; Event Manager – XProjets (Junior Enterprise)</h3>
+            <span class="timeline-date">2019 – 2021 · Palaiseau, France</span>
+            <p>Led proposal development, business strategy and recruitment for client projects, contributing to the organisation’s recognition as one of the top French junior enterprises.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Strategy &amp; Development Manager – X‑Afrique</h3>
+            <span class="timeline-date">2019 – 2021 · Palaiseau, France</span>
+            <p>Organised annual forums and coordinated associative projects; initiated an event discussing colonialism featuring historian Pascal Blanchard.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Deputy Section Head – National Gendarmerie</h3>
+            <span class="timeline-date">Dec 2018 – Apr 2019 · Châteaulin, France</span>
+            <p>Led a section of 33 cadets during intensive training, honing leadership and resilience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="section publications">
+    <div class="container">
+      <h2 class="section-title">Selected Publications</h2>
+      <p class="lead">A concise list of my recent research outputs. For a complete list see Semantic Scholar or ResearchGate profiles.</p>
+      <ul class="pub-list">
+        <li>
+          <strong>Offline Goal‑Conditioned Reinforcement Learning with Projective Quasimetric Planning</strong> (2025) – co‑authored with Waris Radji, Mathieu Petitbois, Odalric‑Ambrym Maillard &amp; Rémy Portelas.
+        </li>
+        <li>
+          <strong>A Continual Offline Reinforcement Learning Benchmark for Navigation Tasks</strong> (IEEE Conference on Games, 2025) – co‑authored with Odalric‑Ambrym Maillard &amp; Rémy Portelas.
+        </li>
+        <li>
+          <strong>Hierarchical Subspaces of Policies for Continual Offline Reinforcement Learning</strong> (arXiv, 2024) – co‑authored with Rémy Portelas, Odalric‑Ambrym Maillard &amp; Ludovic Denoyer.
+        </li>
+        <li>
+          <strong>Efficient Active Imitation Learning with Random Network Distillation</strong> (International Conference on Learning, 2024) – co‑authored with Emilien Bir’e, Ludovic Denoyer &amp; Rémy Portelas.
+        </li>
+        <li>
+          <strong>Learning Computationally Efficient Bots with Costly Features</strong> (IEEE Conference on Games, 2023) – co‑authored with Valliappan C.A., Joshua Romoff &amp; Ludovic Denoyer.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container contact-container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="lead">Feel free to reach out if you’d like to discuss research collaborations, opportunities, or just say hello.</p>
+      <div class="contact-details">
+        <p><strong>Email:</strong> <a href="mailto:anthony.kobanda@polytechnique.org">anthony.kobanda@polytechnique.org</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anthony-kobanda" target="_blank" rel="noopener">anthony-kobanda</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/anthony-kobanda" target="_blank" rel="noopener">anthony-kobanda</a></p>
+      </div>
+      <a href="KOBANDA-Anthony-CV.pdf" class="btn btn-secondary" download>Download Résumé</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Anthony Kobanda · Made with &#x2661;</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
 </html>
