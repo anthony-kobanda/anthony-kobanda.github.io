@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         </h3>
 
         <span className="text-slate-200 text-lg md:text-xl font-medium text-center">
-          Open to discussing new opportunities
+          Open to discussing new opportunities ! 😊
         </span>
 
         <div className="flex items-center gap-10 mt-4">

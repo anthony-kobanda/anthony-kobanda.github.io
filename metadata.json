@@ -1,6 +1,7 @@
 {
-    "author": "Anthony Kobanda",
-    "name": "Anthony Kobanda Personal Website",
-    "description": "Professional and academic website Anthony Kobanda, serving as an online resume and portfolio.",
-    "version": "2.0.0"
+  "author": "Anthony Kobanda",
+  "name": "Anthony Kobanda Personal Website",
+  "description": "Professional and academic website Anthony Kobanda, serving as an online resume and portfolio.",
+  "version": "2.0.0",
+  "requestFramePermissions": []
 }

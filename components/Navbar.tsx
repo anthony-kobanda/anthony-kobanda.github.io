@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Mail, FileText } from 'lucide-react';
+import { RESUME_LINK } from '../constants';
 
 const navItems = [
   { label: 'About', href: '#hero' },
@@ -30,6 +31,13 @@ const Navbar: React.FC = () => {
     }
   };
 
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsOpen(false);
+    const footer = document.querySelector('footer');
+    if (footer) footer.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <nav
@@ -51,7 +59,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center gap-6">
               {navItems.map((item) => (
                 <a
                   key={item.label}
@@ -62,6 +70,31 @@ const Navbar: React.FC = () => {
                   {item.label}
                 </a>
               ))}
+
+              <div className="flex items-center gap-3 ml-2 border-l border-slate-700/50 pl-6">
+                {/* Contact Button */}
+                <button 
+                    onClick={scrollToContact}
+                    className="px-4 py-2 rounded-full bg-slate-200 text-slate-900 font-medium hover:bg-white transition-colors flex items-center gap-2 shadow-sm text-sm"
+                >
+                    <Mail size={16} />
+                    Contact Me
+                </button>
+
+                {/* Resume Button */}
+                <a 
+                    href={RESUME_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative px-4 py-2 rounded-full bg-slate-800 text-teal-400 border border-slate-700 hover:border-teal-500/50 transition-all overflow-hidden text-sm font-medium"
+                >
+                    <span className="relative z-10 flex items-center gap-2 group-hover:text-teal-300">
+                    <FileText size={16} />
+                    Resume
+                    </span>
+                    <div className="absolute inset-0 bg-teal-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                </a>
+              </div>
             </div>
 
             {/* Mobile menu button (Hamburger/Close toggle) */}
@@ -95,17 +128,41 @@ const Navbar: React.FC = () => {
            </button>
         </div>
 
-        <div className="flex flex-col items-center justify-center h-full space-y-8 p-6">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={(e) => handleNavClick(e, item.href)}
-              className="text-3xl font-light text-slate-300 hover:text-teal-400 transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+        <div className="flex flex-col h-full p-6 pt-24 pb-12">
+          {/* Navigation Items Area - Grows to fill space, pushing buttons down */}
+          <div className="flex-grow flex flex-col items-center justify-center space-y-8">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="text-3xl font-light text-slate-300 hover:text-teal-400 transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Buttons Area - Pinned to bottom via flex layout structure */}
+          <div className="flex flex-col gap-4 w-full max-w-xs mx-auto">
+             <button 
+                  onClick={scrollToContact}
+                  className="w-full px-6 py-3 rounded-full bg-slate-200 text-slate-900 font-semibold hover:bg-white transition-colors flex items-center justify-center gap-2"
+               >
+                  <Mail size={20} />
+                  Contact Me
+               </button>
+
+               <a 
+                href={RESUME_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-6 py-3 rounded-full bg-slate-800 text-teal-400 border border-slate-700 hover:border-teal-500/50 transition-all flex items-center justify-center gap-2 font-semibold"
+              >
+                  <FileText size={20} />
+                  Resume
+              </a>
+          </div>
         </div>
       </div>
     </>
