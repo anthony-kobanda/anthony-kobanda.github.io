@@ -45,7 +45,6 @@ const Hero: React.FC = () => {
                 href={RESUME_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                download
                 className="group relative px-6 py-2.5 rounded-full bg-slate-800 text-teal-400 border border-slate-700 hover:border-teal-500/50 transition-all overflow-hidden text-sm md:text-base"
               >
                 <span className="relative z-10 flex items-center gap-2 font-medium group-hover:text-teal-300">
