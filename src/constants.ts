@@ -3,7 +3,7 @@ import { EducationItem, ExperienceItem, PublicationItem, SkillCategory } from ".
 export const EMAIL = "anthony.kobanda@polytechnique.org";
 export const GITHUB_LINK = "https://github.com/Anthony-Kobanda";
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/anthony-kobanda";
-export const RESUME_LINK = "/resume.pdf";
+export const RESUME_LINK = "/kobanda-anthony-resume.pdf";
 export const SCHOLAR_LINK = "https://scholar.google.com/citations?user=dEBQPAkAAAAJ&hl=fr";
 
 export const ABOUT_TEXT = `I am a final year PhD candidate in Reinforcement Learning at Inria Scool and Ubisoft,
