@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
           {/* Profile Image (Right) */}
           <div className="md:col-span-5 flex justify-center md:justify-end w-full mb-4 md:mb-0">
               {/* Reduced size: w-48 (mobile) / w-64 (desktop) */}
-              <div className="relative w-48 h-48 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-800 shadow-xl group">
+              <div className="relative w-48 h-48 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-800 shadow-xl group md:-translate-x-20">
                   <img 
                     src="/profile.jpeg"
                     alt="Anthony Kobanda" 
