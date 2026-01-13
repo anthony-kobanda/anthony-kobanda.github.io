@@ -20,7 +20,7 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: "Tools & Infrastructures",
-    items: ["Conda", "Docker", "Git / GitLab", "SLURM", "... more to come , as a quick learner"],
+    items: ["Conda", "Docker", "Git / GitLab", "SLURM", "... more to come ( quick learner )"],
   },
   {
     category: "Soft Skills",
