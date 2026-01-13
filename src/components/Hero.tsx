@@ -59,16 +59,12 @@ const Hero: React.FC = () => {
           {/* Profile Image (Right) */}
           <div className="md:col-span-5 flex justify-center md:justify-end w-full mb-4 md:mb-0">
               {/* Reduced size: w-48 (mobile) / w-64 (desktop) */}
-              <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-800 shadow-xl">
-                  {/* 
-                    PLACEHOLDER FOR USER PHOTO
-                  */}
-                  <div className="w-full h-full bg-slate-900 flex flex-col items-center justify-center text-slate-600 gap-2">
-                     {/* Use img tag here for real photo */}
-                     <div className="w-16 h-16 rounded-full bg-slate-800 border-2 border-dashed border-slate-700 flex items-center justify-center">
-                        <span className="text-xs">Photo</span>
-                     </div>
-                  </div>
+              <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-800 shadow-xl group">
+                  <img 
+                    src="/profile.jpg" 
+                    alt="Anthony Kobanda" 
+                    className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                  />
               </div>
           </div>
 
