@@ -4,7 +4,7 @@ import { EMAIL, LINKEDIN_LINK, GITHUB_LINK } from '../constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-12 px-4 flex justify-center mt-24 mb-16" id="contact">
+    <footer className="py-12 px-4 flex justify-center mt-24 mb-32" id="contact">
       <div className="bg-slate-800/40 backdrop-blur-md border border-slate-700/50 rounded-[2.5rem] px-12 py-10 flex flex-col items-center gap-6 shadow-2xl max-w-2xl w-full mx-auto transform hover:scale-[1.01] transition-transform duration-300">
         
         {/* Contact Title */}
